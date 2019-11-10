@@ -1,64 +1,118 @@
 Exercises
 
-Print Hello World in console.
+
+1. Print Hello World in console.
 
 echo Hello World
 
-Create a new folder named new_dir.
+
+
+2. Create a new folder named new_dir.
 
 mkdir new_dir
 
-Delete new_dir folder.
 
-rm -rf new_dir
 
-Make a copy of sed.txt (located in the lorem folder) to lorem-copy.
+3. Delete new_dir folder.
+
+rm -r new_dir
+
+
+
+4. Make a copy of sed.txt (located in the lorem folder) to lorem-copy.
 
 cp lorem/sed.txt lorem-copy
 
-Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;).
+
+
+5. Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use ;).
 
 cp lorem/at.txt lorem/lorem.txt lorem-copy
 
-Locate at lorem folder and show sed.txt content.
+
+
+6. Locate at lorem folder and show sed.txt content.
 
 cd lorem-copy
 cat sed.txt
 
-Locate at lorem folder and show at.txt and lorem.txt content.
-
-cd .. 
-cd lorem
 
 
-Locate at lorem-copy folder and show the first three lines of sed.txt.
+7. catLocate at lorem folder and show at.txt and lorem.txt content.
 
-cat at.txt lorem.txt
+cat at.txt cat loores.txt
 
-Locate at lorem-copy folder and show the last three lines of sed.txt.
+
+
+8. Locate at lorem-copy folder and show the first three lines of sed.txt.
 
 head -n 3 sed.txt
 
-Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
+
+
+9. sedLocate at lorem-copy folder and show the last three lines of sed.txt.
+
+tail -n 3 sed.txt
+
+
+
+10. Add Homo homini lupus. at the end of sed.txt located at lorem-copy.
 
 echo 'Homo homini lupus' >> sed.txt
 
-Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
 
-Change every et to ET in at.txt located at lorem-copy (tip: use sed).
 
-Find the active user of the system.
+11. Locate at lorem-copy folder and show the last three lines of sed.txt. Now you should see Homo homini lupus..
 
-Find out where are you located within the system.
+tail -n 3 sed.txt
 
-List all .txt files located at lorem.
 
-Count the number of lines in sed.txt located at lorem.
+12. Change every et to ET in at.txt located at lorem-copy (tip: use sed).
 
-Count the number of files which name starts with lorem located at the whole lab directory.
+sed 's/et/et/g' at.txt
 
-Find every appearance of et in at.txt located at lorem.
 
-Find every appearance of the string et in at.txt located at lorem.
+13. Find the active user of the system.
 
-Find every appearance of the string et located at the whole lab directory.
+users or Who
+
+
+14. Find out where are you located within the system.
+
+pwd
+
+
+
+15. List all .txt files located at lorem.
+
+ls
+
+
+16. Count the number of lines in sed.txt located at lorem.
+
+wc sed.txt
+
+
+17. Count the number of files which name starts with lorem located at the whole lab directory.
+
+find /Users/Abacuc/lab -name lorem* | wc -l
+
+
+18. Find every appearance of et in at.txt located at lorem.
+
+find /Users/Abacuc/lab/dataptmad1019/module-1/lab-bash-master/lorem/at.txt -name *et* | wc -l
+
+grep -o -i et at.txt | wc -l
+
+
+19. Find every appearance of the string et in at.txt located at lorem.
+
+
+grep -o -i et* at.txt | wc -l
+
+
+20. Find every appearance of the string et located at the whole lab directory.
+
+
+find /Users/Abacuc/lab -name et* | wc -c
+
